@@ -5,12 +5,12 @@ import { LinearProgress, Button } from '@material-ui/core'
 const Status = ({ values, onCancel }) => (
   <main>
     {values ? <>
-      PG: {values.pg}
-      <LinearProgress variant="determinate" value={50} />
-      VG: {values.vg}
-      <LinearProgress variant="determinate" value={20} />
-      Nic: {values.nic}
-      <LinearProgress variant="determinate" value={70} />
+      <h2>PG: 0.0/{values.pg}mg</h2>
+      <LinearProgress variant="determinate" value={0/values.pg} />
+      <h2>VG: 0.0/{values.vg}mg</h2>
+      <LinearProgress variant="determinate" value={0/values.vg} />
+      <h2>NIC: 0.0/{values.nic}mg</h2>
+      <LinearProgress variant="determinate" value={0/values.nic} />
       <br />
       <Button type="submit" onClick={onCancel} variant="contained">Cancel</Button>
     </> : <Link to="/mix">Enter values first</Link>}
